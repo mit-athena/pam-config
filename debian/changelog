@@ -1,3 +1,9 @@
+debathena-pam-config (1.23) unstable; urgency=low
+
+  * Never enable libpam-krb524
+
+ -- Victor Vasiliev <vasilvv@mit.edu>  Wed, 26 Mar 2014 16:14:11 -0400
+
 debathena-pam-config (1.22) unstable; urgency=low
 
   [ Jonathan Reed ]
