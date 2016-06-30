@@ -20,7 +20,10 @@ ifeq ($(pam_auth_update),)
     endif
 endif
 
-ifneq ($(wildcard /etc/pam.d/gdm3),)
+ifneq ($(realpath /etc/pam.d/gdm-password),)
+    PAM_GDM := $(realpath /etc/pam.d/gdm-password).debathena
+    DEB_TRANSFORM_SCRIPT_$(PAM_GDM) = debian/transform_gdm.debathena
+else ifneq ($(wildcard /etc/pam.d/gdm3),)
     PAM_GDM = /etc/pam.d/gdm3.debathena
     DEB_TRANSFORM_SCRIPT_$(PAM_GDM) = debian/transform_gdm.debathena
 else
