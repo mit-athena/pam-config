@@ -1,3 +1,10 @@
+debathena-pam-config (1.25) unstable; urgency=medium
+
+  * Replace debathena-gdm, debathena-ssh-server build dependencies with
+    gdm3 | gdm, openssh-server (>= 1:4.3) | ssh-krb5.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Sun, 13 Nov 2016 20:08:24 -0500
+
 debathena-pam-config (1.24) unstable; urgency=medium
 
   * Handle /etc/pam.d/gdm-password being a regular file in xenial.  (It
