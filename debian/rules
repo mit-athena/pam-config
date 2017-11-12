@@ -95,17 +95,8 @@ endif
 
 common-build-indep:: debian/access.conf.debathena
 
-LSB_ID = $(shell lsb_release --short --id)
 debian/access.conf.debathena: $(call debian_check_files,/etc/security/access.conf)
-ifeq ($(LSB_ID), Debian)
-	(cat $<; sed 's/root admin /root /' debian/access.conf.append) > $@
-else
-    ifeq ($(LSB_ID), Ubuntu)
 	cat $< debian/access.conf.append > $@
-    else
-	$(error Unrecognized distribution ID $(LSB_ID).)
-    endif
-endif
 
 clean::
 	rm -f debian/access.conf.debathena

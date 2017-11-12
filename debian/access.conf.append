@@ -15,6 +15,6 @@
 # on the machine (i.e. are in /etc/passwd).  Allow all other users to
 # login only locally.
 
--:ALL EXCEPT root sudo admin nss-local-users:ALL EXCEPT LOCAL
+-:ALL EXCEPT root sudo nss-local-users:ALL EXCEPT LOCAL
 
 #DEBATHENA END

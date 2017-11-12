@@ -1,3 +1,10 @@
+debathena-pam-config (1.27) UNRELEASED; urgency=medium
+
+  * Remove the admin group from the default access.conf, as it is no
+    longer present on Ubuntu either.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Sat, 11 Nov 2017 21:58:08 -0500
+
 debathena-pam-config (1.26) unstable; urgency=medium
 
   [Jacob Morzinski]
