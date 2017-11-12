@@ -1,3 +1,10 @@
+debathena-pam-config (1.26) unstable; urgency=medium
+
+  [Jacob Morzinski]
+  * Grant users in the sudo group remote login access.
+
+ -- Lizhou Sha <slz@mit.edu>  Sat, 11 Nov 2017 19:35:34 -0500
+
 debathena-pam-config (1.25) unstable; urgency=medium
 
   * Replace debathena-gdm, debathena-ssh-server build dependencies with
