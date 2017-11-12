@@ -96,6 +96,12 @@ endif
 common-build-indep:: debian/access.conf.debathena
 
 debian/access.conf.debathena: $(call debian_check_files,/etc/security/access.conf)
+	set -eux; for user in $$(awk -F: '/^[^#]/ {print $$2}' debian/access.conf.append); do \
+	    case "$$user" in \
+	        ALL|EXCEPT|nss-local-users) ;; \
+	        *) cut -d: -f1 /usr/share/base-passwd/passwd.master /usr/share/base-passwd/group.master | grep -Fxe "$$user";; \
+	    esac; \
+	done
 	cat $< debian/access.conf.append > $@
 
 clean::
